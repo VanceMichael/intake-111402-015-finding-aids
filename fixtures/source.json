@@ -1,0 +1,152 @@
+{
+  "exchanges": [
+    {
+      "path": "/guides",
+      "method": "GET",
+      "body": {
+        "items": [
+          {
+            "guideId": "g1",
+            "version": "v1"
+          },
+          {
+            "guideId": "g2",
+            "version": "v1"
+          }
+        ]
+      },
+      "requires": {},
+      "sets": {},
+      "status": 200,
+      "query": {}
+    },
+    {
+      "path": "/guides/g1",
+      "method": "GET",
+      "body": {
+        "guideId": "g1",
+        "version": "v1",
+        "component": {
+          "localId": "root",
+          "level": "fonds",
+          "title": "工厂档案",
+          "accessrestrict": {
+            "state": "restricted",
+            "text": "需馆员批准"
+          },
+          "children": [
+            {
+              "localId": "item1",
+              "level": "item",
+              "unitid": "BOX-1",
+              "title": "参观记录",
+              "dao": "/objects/o1",
+              "children": []
+            }
+          ]
+        }
+      },
+      "requires": {},
+      "sets": {},
+      "status": 200,
+      "query": {}
+    },
+    {
+      "path": "/objects/o1",
+      "method": "GET",
+      "body": {
+        "error": "restricted"
+      },
+      "requires": {},
+      "sets": {},
+      "status": 403,
+      "query": {}
+    },
+    {
+      "path": "/guides/g2",
+      "method": "GET",
+      "body": {
+        "guideId": "g2",
+        "version": "v1",
+        "component": {
+          "localId": "root",
+          "level": "fonds",
+          "title": "开放参观档案",
+          "accessrestrict": {
+            "state": "public",
+            "text": "公开资料"
+          },
+          "children": [
+            {
+              "localId": "item2",
+              "level": "item",
+              "unitid": "BOX-2",
+              "title": "开放日路线",
+              "dao": "/objects/o2",
+              "children": []
+            }
+          ]
+        }
+      },
+      "requires": {},
+      "sets": {},
+      "status": 200,
+      "query": {}
+    },
+    {
+      "path": "/objects/o2",
+      "method": "GET",
+      "body": {
+        "data": "bG9jYWwtZ3VpZGU=",
+        "owner": "g2:item2",
+        "version": "v1"
+      },
+      "requires": {},
+      "sets": {},
+      "status": 200,
+      "query": {}
+    }
+  ],
+  "cases": {
+    "moved": [
+      {
+        "path": "/guides/g1",
+        "method": "GET",
+        "body": {
+          "guideId": "g1",
+          "version": "v2",
+          "component": {
+            "localId": "root",
+            "level": "fonds",
+            "title": "工厂档案",
+            "children": [
+              {
+                "localId": "series",
+                "level": "series",
+                "title": "新编系列",
+                "accessrestrict": {
+                  "state": "restricted",
+                  "text": "暂缓开放"
+                },
+                "externalGuide": "g1",
+                "children": [
+                  {
+                    "localId": "item1",
+                    "level": "item",
+                    "unitid": "BOX-1",
+                    "title": "参观记录",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "requires": {},
+        "sets": {},
+        "status": 200,
+        "query": {}
+      }
+    ]
+  }
+}
