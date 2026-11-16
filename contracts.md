@@ -10,4 +10,20 @@ GET /guides 返回 guideId/version；GET /guides/:id 返回 component 树，节�
 
 ## 收存约定
 
-当前适配器 collect(client) 返回带字符串 id 的原件行。Archive.put(rows, provenance) 按实际内容和来源生成摘要，保留不同内容。该原件归档不自动决定业务当前值、引用已解析、区间完整或远端已确认；业务投影与领取状态需要各自维护。GET /records 保留兼容，不将未知状态伪造为成功。
+适配器 collect(client) 返回带字符串 id 的原件行，每个组件的 id 为 `guideId:localId`。Archive.put(rows, provenance) 按实际内容和来源生成摘要，保留不同内容。该原件归档不自动决定业务当前值、引用已解析、区间完整或远端已确认；业务投影与领取状态需要各自维护。GET /records 保留兼容，不将未知状态伪造为成功。
+
+### 条目行
+
+每个组件（不只是叶子）导出一行，字段语义：
+
+- `path`：从根到本组件的完整路径，每项含 id/localId/level/title、自身书写的 unitid、`effectiveUnitid`、`description` 与当时生效的 `effectiveAccessrestrict`。`pathIds`/`pathKey` 给出同一路径的稳定键；标题相同而路径不同仍是不同条目。
+- `description`/`explicit`：来源为该组件明确书写的字段，逐字保留。继承来的取值绝不写入这里。
+- `unitid`：本条目实际所在盒号，可能继承自祖先；`ownUnitid` 是组件自身书写的值（未写为 null），`inheritedUnitid` 记录继承来源 id。
+- `accessrestrict`：仅当组件自己写了才出现，原文不动。`access` 是本条目生效的限制，`inherited.accessrestrict` 仅在取值继承时出现，`access.sourceId` 指向书写该限制的组件。路径上无人声明时为 `unstated`，不是 `public`。
+- `objects`：只领取该组件自己声明的 `dao`。每项 status 为 `acquired`（已取得内容，附 digest）、`restricted`（HTTP 403）或 `error`。`acquisition` 汇总 `status`/`holdsOriginal`/`catalogOnly`/`hasRestrictedObjects` 与各计数。
+- `externalReferences`：`externalGuide` 作为边界保留，不内联外部指南。status 为 `external`、`unresolved`、`cycle`；自引用或已在上游出现的指南标 `cycle` 且不展开。
+- `provenance`：guideId、guideVersion 与路径快照，用于跨修订追查。
+
+### 馆员查询
+
+GET /entries 返回每个 id 最近一次收件（含 `receiptCount` 与 receipt 摘要）；`?status=originals|catalog|restricted` 过滤已取得原件、仅目录记录、含受限数字对象的条目，`?guide=` 按指南过滤。GET /entries/:id/history 返回该条目的全部保留版本（路径移动、限制收紧均可追查）。

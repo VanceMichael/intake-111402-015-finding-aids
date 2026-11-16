@@ -1,0 +1,710 @@
+[
+  {
+    "row": {
+      "id": "g1:item1",
+      "guideId": "g1",
+      "version": "v1",
+      "localId": "item1",
+      "level": "item",
+      "title": "参观记录",
+      "parentId": "g1:root",
+      "depth": 1,
+      "isLeaf": true,
+      "path": [
+        {
+          "id": "g1:root",
+          "localId": "root",
+          "level": "fonds",
+          "title": "工厂档案",
+          "unitid": null,
+          "effectiveUnitid": null,
+          "description": {
+            "level": "fonds",
+            "title": "工厂档案",
+            "accessrestrict": {
+              "state": "restricted",
+              "text": "需馆员批准"
+            }
+          },
+          "effectiveAccessrestrict": {
+            "state": "restricted",
+            "text": "需馆员批准",
+            "source": "root",
+            "sourceId": "g1:root",
+            "sourceLevel": "fonds",
+            "inherited": false,
+            "resolved": true
+          }
+        },
+        {
+          "id": "g1:item1",
+          "localId": "item1",
+          "level": "item",
+          "title": "参观记录",
+          "unitid": "BOX-1",
+          "effectiveUnitid": "BOX-1",
+          "description": {
+            "level": "item",
+            "unitid": "BOX-1",
+            "title": "参观记录",
+            "dao": "/objects/o1"
+          },
+          "effectiveAccessrestrict": {
+            "state": "restricted",
+            "text": "需馆员批准",
+            "source": "root",
+            "sourceId": "g1:root",
+            "sourceLevel": "fonds",
+            "inherited": true,
+            "resolved": true
+          }
+        }
+      ],
+      "ancestors": [
+        {
+          "id": "g1:root",
+          "localId": "root",
+          "level": "fonds",
+          "title": "工厂档案",
+          "unitid": null,
+          "effectiveUnitid": null,
+          "description": {
+            "level": "fonds",
+            "title": "工厂档案",
+            "accessrestrict": {
+              "state": "restricted",
+              "text": "需馆员批准"
+            }
+          },
+          "effectiveAccessrestrict": {
+            "state": "restricted",
+            "text": "需馆员批准",
+            "source": "root",
+            "sourceId": "g1:root",
+            "sourceLevel": "fonds",
+            "inherited": false,
+            "resolved": true
+          }
+        }
+      ],
+      "ancestorIds": [
+        "g1:root"
+      ],
+      "pathIds": [
+        "root",
+        "item1"
+      ],
+      "pathKey": "g1:root/item1",
+      "unitid": "BOX-1",
+      "effectiveUnitid": "BOX-1",
+      "inheritedUnitid": null,
+      "description": {
+        "level": "item",
+        "unitid": "BOX-1",
+        "title": "参观记录",
+        "dao": "/objects/o1"
+      },
+      "explicit": {
+        "level": "item",
+        "unitid": "BOX-1",
+        "title": "参观记录",
+        "dao": "/objects/o1"
+      },
+      "ownAccessrestrict": null,
+      "access": {
+        "state": "restricted",
+        "text": "需馆员批准",
+        "source": "root",
+        "sourceId": "g1:root",
+        "sourceLevel": "fonds",
+        "inherited": true,
+        "resolved": true
+      },
+      "accessChain": [
+        {
+          "id": "g1:root",
+          "localId": "root",
+          "level": "fonds",
+          "state": "restricted",
+          "text": "需馆员批准"
+        }
+      ],
+      "isPublic": false,
+      "isRestricted": true,
+      "isUnstated": false,
+      "inherited": {
+        "unitid": null,
+        "accessrestrict": {
+          "state": "restricted",
+          "text": "需馆员批准",
+          "source": "root",
+          "sourceId": "g1:root",
+          "sourceLevel": "fonds",
+          "inherited": true,
+          "resolved": true
+        },
+        "chain": [
+          {
+            "id": "g1:root",
+            "localId": "root",
+            "level": "fonds",
+            "state": "restricted",
+            "text": "需馆员批准"
+          }
+        ]
+      },
+      "externalReferences": [],
+      "externalGuideIds": [],
+      "objects": [
+        {
+          "ref": "/objects/o1",
+          "status": "restricted",
+          "available": false,
+          "acquired": false,
+          "restricted": true,
+          "httpStatus": 403,
+          "error": "restricted",
+          "declaredBy": "g1:item1"
+        }
+      ],
+      "acquisition": {
+        "status": "restricted",
+        "holdsOriginal": false,
+        "catalogOnly": false,
+        "isContainer": false,
+        "hasRestrictedObjects": true,
+        "objectCount": 1,
+        "acquiredCount": 0,
+        "restrictedCount": 1,
+        "errorCount": 0,
+        "acquiredRefs": [],
+        "restrictedRefs": [
+          "/objects/o1"
+        ],
+        "errorRefs": []
+      },
+      "provenance": {
+        "guideId": "g1",
+        "guideVersion": "v1",
+        "pathKey": "g1:root/item1",
+        "pathIds": [
+          "root",
+          "item1"
+        ],
+        "pathTitles": [
+          "工厂档案",
+          "参观记录"
+        ],
+        "pathLevels": [
+          "fonds",
+          "item"
+        ]
+      },
+      "dao": "/objects/o1"
+    },
+    "provenance": {
+      "source": "http://127.0.0.1:4010",
+      "adapter": "current"
+    },
+    "digest": "b16b363b21e820fb9fffdd4e924a460928be0e294d55c65fdd038418eda2230d"
+  },
+  {
+    "row": {
+      "id": "g1:root",
+      "guideId": "g1",
+      "version": "v1",
+      "localId": "root",
+      "level": "fonds",
+      "title": "工厂档案",
+      "parentId": null,
+      "depth": 0,
+      "isLeaf": false,
+      "path": [
+        {
+          "id": "g1:root",
+          "localId": "root",
+          "level": "fonds",
+          "title": "工厂档案",
+          "unitid": null,
+          "effectiveUnitid": null,
+          "description": {
+            "level": "fonds",
+            "title": "工厂档案",
+            "accessrestrict": {
+              "state": "restricted",
+              "text": "需馆员批准"
+            }
+          },
+          "effectiveAccessrestrict": {
+            "state": "restricted",
+            "text": "需馆员批准",
+            "source": "root",
+            "sourceId": "g1:root",
+            "sourceLevel": "fonds",
+            "inherited": false,
+            "resolved": true
+          }
+        }
+      ],
+      "ancestors": [],
+      "ancestorIds": [],
+      "pathIds": [
+        "root"
+      ],
+      "pathKey": "g1:root",
+      "unitid": null,
+      "effectiveUnitid": null,
+      "inheritedUnitid": null,
+      "description": {
+        "level": "fonds",
+        "title": "工厂档案",
+        "accessrestrict": {
+          "state": "restricted",
+          "text": "需馆员批准"
+        }
+      },
+      "explicit": {
+        "level": "fonds",
+        "title": "工厂档案",
+        "accessrestrict": {
+          "state": "restricted",
+          "text": "需馆员批准"
+        }
+      },
+      "ownAccessrestrict": {
+        "state": "restricted",
+        "text": "需馆员批准"
+      },
+      "access": {
+        "state": "restricted",
+        "text": "需馆员批准",
+        "source": "root",
+        "sourceId": "g1:root",
+        "sourceLevel": "fonds",
+        "inherited": false,
+        "resolved": true
+      },
+      "accessChain": [
+        {
+          "id": "g1:root",
+          "localId": "root",
+          "level": "fonds",
+          "state": "restricted",
+          "text": "需馆员批准"
+        }
+      ],
+      "isPublic": false,
+      "isRestricted": true,
+      "isUnstated": false,
+      "inherited": {
+        "unitid": null,
+        "accessrestrict": null,
+        "chain": [
+          {
+            "id": "g1:root",
+            "localId": "root",
+            "level": "fonds",
+            "state": "restricted",
+            "text": "需馆员批准"
+          }
+        ]
+      },
+      "externalReferences": [],
+      "externalGuideIds": [],
+      "objects": [],
+      "acquisition": {
+        "status": "catalog",
+        "holdsOriginal": false,
+        "catalogOnly": true,
+        "isContainer": true,
+        "hasRestrictedObjects": false,
+        "objectCount": 0,
+        "acquiredCount": 0,
+        "restrictedCount": 0,
+        "errorCount": 0,
+        "acquiredRefs": [],
+        "restrictedRefs": [],
+        "errorRefs": []
+      },
+      "provenance": {
+        "guideId": "g1",
+        "guideVersion": "v1",
+        "pathKey": "g1:root",
+        "pathIds": [
+          "root"
+        ],
+        "pathTitles": [
+          "工厂档案"
+        ],
+        "pathLevels": [
+          "fonds"
+        ]
+      },
+      "accessrestrict": {
+        "state": "restricted",
+        "text": "需馆员批准"
+      }
+    },
+    "provenance": {
+      "source": "http://127.0.0.1:4010",
+      "adapter": "current"
+    },
+    "digest": "a487ed57c8a4ba46a0df0ddb2dc74e8df612556d5a5809f862cbe7e1103d545d"
+  },
+  {
+    "row": {
+      "id": "g2:item2",
+      "guideId": "g2",
+      "version": "v1",
+      "localId": "item2",
+      "level": "item",
+      "title": "开放日路线",
+      "parentId": "g2:root",
+      "depth": 1,
+      "isLeaf": true,
+      "path": [
+        {
+          "id": "g2:root",
+          "localId": "root",
+          "level": "fonds",
+          "title": "开放参观档案",
+          "unitid": null,
+          "effectiveUnitid": null,
+          "description": {
+            "level": "fonds",
+            "title": "开放参观档案",
+            "accessrestrict": {
+              "state": "public",
+              "text": "公开资料"
+            }
+          },
+          "effectiveAccessrestrict": {
+            "state": "public",
+            "text": "公开资料",
+            "source": "root",
+            "sourceId": "g2:root",
+            "sourceLevel": "fonds",
+            "inherited": false,
+            "resolved": true
+          }
+        },
+        {
+          "id": "g2:item2",
+          "localId": "item2",
+          "level": "item",
+          "title": "开放日路线",
+          "unitid": "BOX-2",
+          "effectiveUnitid": "BOX-2",
+          "description": {
+            "level": "item",
+            "unitid": "BOX-2",
+            "title": "开放日路线",
+            "dao": "/objects/o2"
+          },
+          "effectiveAccessrestrict": {
+            "state": "public",
+            "text": "公开资料",
+            "source": "root",
+            "sourceId": "g2:root",
+            "sourceLevel": "fonds",
+            "inherited": true,
+            "resolved": true
+          }
+        }
+      ],
+      "ancestors": [
+        {
+          "id": "g2:root",
+          "localId": "root",
+          "level": "fonds",
+          "title": "开放参观档案",
+          "unitid": null,
+          "effectiveUnitid": null,
+          "description": {
+            "level": "fonds",
+            "title": "开放参观档案",
+            "accessrestrict": {
+              "state": "public",
+              "text": "公开资料"
+            }
+          },
+          "effectiveAccessrestrict": {
+            "state": "public",
+            "text": "公开资料",
+            "source": "root",
+            "sourceId": "g2:root",
+            "sourceLevel": "fonds",
+            "inherited": false,
+            "resolved": true
+          }
+        }
+      ],
+      "ancestorIds": [
+        "g2:root"
+      ],
+      "pathIds": [
+        "root",
+        "item2"
+      ],
+      "pathKey": "g2:root/item2",
+      "unitid": "BOX-2",
+      "effectiveUnitid": "BOX-2",
+      "inheritedUnitid": null,
+      "description": {
+        "level": "item",
+        "unitid": "BOX-2",
+        "title": "开放日路线",
+        "dao": "/objects/o2"
+      },
+      "explicit": {
+        "level": "item",
+        "unitid": "BOX-2",
+        "title": "开放日路线",
+        "dao": "/objects/o2"
+      },
+      "ownAccessrestrict": null,
+      "access": {
+        "state": "public",
+        "text": "公开资料",
+        "source": "root",
+        "sourceId": "g2:root",
+        "sourceLevel": "fonds",
+        "inherited": true,
+        "resolved": true
+      },
+      "accessChain": [
+        {
+          "id": "g2:root",
+          "localId": "root",
+          "level": "fonds",
+          "state": "public",
+          "text": "公开资料"
+        }
+      ],
+      "isPublic": true,
+      "isRestricted": false,
+      "isUnstated": false,
+      "inherited": {
+        "unitid": null,
+        "accessrestrict": {
+          "state": "public",
+          "text": "公开资料",
+          "source": "root",
+          "sourceId": "g2:root",
+          "sourceLevel": "fonds",
+          "inherited": true,
+          "resolved": true
+        },
+        "chain": [
+          {
+            "id": "g2:root",
+            "localId": "root",
+            "level": "fonds",
+            "state": "public",
+            "text": "公开资料"
+          }
+        ]
+      },
+      "externalReferences": [],
+      "externalGuideIds": [],
+      "objects": [
+        {
+          "ref": "/objects/o2",
+          "status": "acquired",
+          "available": true,
+          "acquired": true,
+          "restricted": false,
+          "httpStatus": 200,
+          "content": "bG9jYWwtZ3VpZGU=",
+          "digest": "6a1d5bac6725ad2f81ebecc5dcb639a4e6223de59ef979cb0f81b1849b0bb53f",
+          "owner": "g2:item2",
+          "objectVersion": "v1",
+          "declaredBy": "g2:item2",
+          "ownerMatches": true
+        }
+      ],
+      "acquisition": {
+        "status": "original",
+        "holdsOriginal": true,
+        "catalogOnly": false,
+        "isContainer": false,
+        "hasRestrictedObjects": false,
+        "objectCount": 1,
+        "acquiredCount": 1,
+        "restrictedCount": 0,
+        "errorCount": 0,
+        "acquiredRefs": [
+          "/objects/o2"
+        ],
+        "restrictedRefs": [],
+        "errorRefs": []
+      },
+      "provenance": {
+        "guideId": "g2",
+        "guideVersion": "v1",
+        "pathKey": "g2:root/item2",
+        "pathIds": [
+          "root",
+          "item2"
+        ],
+        "pathTitles": [
+          "开放参观档案",
+          "开放日路线"
+        ],
+        "pathLevels": [
+          "fonds",
+          "item"
+        ]
+      },
+      "dao": "/objects/o2"
+    },
+    "provenance": {
+      "source": "http://127.0.0.1:4010",
+      "adapter": "current"
+    },
+    "digest": "1e9edc076622bcd21df81c0f8c16c44e74d4feca48982b0aafebc1b495e893ba"
+  },
+  {
+    "row": {
+      "id": "g2:root",
+      "guideId": "g2",
+      "version": "v1",
+      "localId": "root",
+      "level": "fonds",
+      "title": "开放参观档案",
+      "parentId": null,
+      "depth": 0,
+      "isLeaf": false,
+      "path": [
+        {
+          "id": "g2:root",
+          "localId": "root",
+          "level": "fonds",
+          "title": "开放参观档案",
+          "unitid": null,
+          "effectiveUnitid": null,
+          "description": {
+            "level": "fonds",
+            "title": "开放参观档案",
+            "accessrestrict": {
+              "state": "public",
+              "text": "公开资料"
+            }
+          },
+          "effectiveAccessrestrict": {
+            "state": "public",
+            "text": "公开资料",
+            "source": "root",
+            "sourceId": "g2:root",
+            "sourceLevel": "fonds",
+            "inherited": false,
+            "resolved": true
+          }
+        }
+      ],
+      "ancestors": [],
+      "ancestorIds": [],
+      "pathIds": [
+        "root"
+      ],
+      "pathKey": "g2:root",
+      "unitid": null,
+      "effectiveUnitid": null,
+      "inheritedUnitid": null,
+      "description": {
+        "level": "fonds",
+        "title": "开放参观档案",
+        "accessrestrict": {
+          "state": "public",
+          "text": "公开资料"
+        }
+      },
+      "explicit": {
+        "level": "fonds",
+        "title": "开放参观档案",
+        "accessrestrict": {
+          "state": "public",
+          "text": "公开资料"
+        }
+      },
+      "ownAccessrestrict": {
+        "state": "public",
+        "text": "公开资料"
+      },
+      "access": {
+        "state": "public",
+        "text": "公开资料",
+        "source": "root",
+        "sourceId": "g2:root",
+        "sourceLevel": "fonds",
+        "inherited": false,
+        "resolved": true
+      },
+      "accessChain": [
+        {
+          "id": "g2:root",
+          "localId": "root",
+          "level": "fonds",
+          "state": "public",
+          "text": "公开资料"
+        }
+      ],
+      "isPublic": true,
+      "isRestricted": false,
+      "isUnstated": false,
+      "inherited": {
+        "unitid": null,
+        "accessrestrict": null,
+        "chain": [
+          {
+            "id": "g2:root",
+            "localId": "root",
+            "level": "fonds",
+            "state": "public",
+            "text": "公开资料"
+          }
+        ]
+      },
+      "externalReferences": [],
+      "externalGuideIds": [],
+      "objects": [],
+      "acquisition": {
+        "status": "catalog",
+        "holdsOriginal": false,
+        "catalogOnly": true,
+        "isContainer": true,
+        "hasRestrictedObjects": false,
+        "objectCount": 0,
+        "acquiredCount": 0,
+        "restrictedCount": 0,
+        "errorCount": 0,
+        "acquiredRefs": [],
+        "restrictedRefs": [],
+        "errorRefs": []
+      },
+      "provenance": {
+        "guideId": "g2",
+        "guideVersion": "v1",
+        "pathKey": "g2:root",
+        "pathIds": [
+          "root"
+        ],
+        "pathTitles": [
+          "开放参观档案"
+        ],
+        "pathLevels": [
+          "fonds"
+        ]
+      },
+      "accessrestrict": {
+        "state": "public",
+        "text": "公开资料"
+      }
+    },
+    "provenance": {
+      "source": "http://127.0.0.1:4010",
+      "adapter": "current"
+    },
+    "digest": "cf65b3cf38d31d26b37c5292d6a33ead4c981bcaf330bd07b8fd019c568df04d"
+  }
+]

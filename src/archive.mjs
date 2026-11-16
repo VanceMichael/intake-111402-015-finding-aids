@@ -8,6 +8,30 @@ export class Archive {
     try {return JSON.parse(await readFile(join(this.directory,'records.json'),'utf8'));}
     catch(error) {if(error.code === 'ENOENT') return [];throw error;}
   }
+  // The original archive keeps every distinct receipt. This is a separate
+  // read-only projection for the librarian: the most recently received
+  // record per entry id, with the receipt count and provenance attached.
+  // It deliberately says nothing about which guide version is "current".
+  async entries() {
+    const records = await this.list();
+    const latest = new Map();
+    const receipts = new Map();
+    for (const record of records) {
+      const id = record.row?.id;
+      if (typeof id !== 'string') continue;
+      latest.set(id,record);
+      receipts.set(id,(receipts.get(id) ?? 0) + 1);
+    }
+    return [...latest.values()].map(record => ({
+      ...record.row,
+      receiptCount:receipts.get(record.row.id) ?? 1,
+      receipt:{provenance:record.provenance,digest:record.digest}
+    }));
+  }
+  async history(id) {
+    const records = await this.list();
+    return records.filter(record => record.row?.id === id);
+  }
   put(rows, provenance) {
     const operation = this.serial.then(async () => {
       if (!Array.isArray(rows) || rows.some(row => typeof row.id !== 'string' || !row.id)) throw new Error('record id required');
